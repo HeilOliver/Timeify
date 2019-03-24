@@ -1,0 +1,8 @@
+﻿namespace Timeify.Api.Shared.Models.Request
+{
+    public class ExchangeRefreshTokenRequest
+    {
+        public string AccessToken { get; set; }
+        public string RefreshToken { get; set; }
+    }
+}

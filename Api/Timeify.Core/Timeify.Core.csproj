@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Timeify.Api.Shared\Timeify.Api.Shared.csproj" />
+    <ProjectReference Include="..\Timeify.Common\Timeify.Common.csproj" />
+  </ItemGroup>
+
+</Project>

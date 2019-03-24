@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="648" font-variant="normal" class="str3" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Yu Gothic">
+		<font-face-src>
+			<font-face-name name="Yu Gothic Regular"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="E" horiz-adv-x="619" d="M561.498 750.999l0 -57.0002 -382.832 0 0 -254.997 289.167 0 0 -57.0002 -289.167 0 0 -303.001 390.167 0 0 -57.0002 -455.998 0 0 728.999 448.663 0z"/>
+   <glyph unicode="F" horiz-adv-x="607" d="M560.498 750.999l0 -57.0002 -381.832 0 0 -256.997 288.167 0 0 -57.0002 -288.167 0 0 -358.001 -65.8312 0 0 728.999 447.663 0z"/>
+   <glyph unicode="I" horiz-adv-x="292" d="M178.666 750.999l0 -728.999 -65.8312 0 0 728.999 65.8312 0z"/>
+   <glyph unicode="M" horiz-adv-x="918" d="M805.668 750.999l0 -728.999 -63.0002 0 0 459.167 1 215.832 -11.1691 0c-9.83097,-33.1656 -32.8311,-103.831 -69.0002,-211.997l-164.001 -463.002 -84.9967 0 -161.501 463.002c-23.8346,67.8312 -47.3347,138.331 -70.3348,211.997l-10.8346 0c-0.330936,-14.0001 -0.500002,-28.6656 -0.500002,-44.0002l1.50001 -172.832 0 -458.167 -59.9966 0 0 728.999 110.831 0 158.166 -457.167c26.0001,-74.1657 50.0002,-145.497 71.8348,-213.832l10.1655 0c37.5001,111.666 61.3348,182.001 71.8348,211.001l160.166 459.998 109.835 0z"/>
+   <glyph unicode="T" horiz-adv-x="628" d="M581.498 750.999l0 -57.0002 -234.832 0 0 -671.999 -65.8348 0 0 671.999 -233.997 0 0 57.0002 534.664 0z"/>
+   <glyph unicode="Y" horiz-adv-x="648" d="M607.833 750.999l-252.832 -418.998 0 -310.001 -66.8348 0 0 310.001 -247.166 418.998 76.1657 0 176.835 -307.332c6.83096,-11 17.0001,-28.8346 30.6656,-53.6657 5.00002,7.50003 11.1655,17.6655 18.6655,30.331 7.16909,12.3346 12.3346,21.1691 15.5001,26.3346l176.835 304.332 72.1657 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Yu Gothic";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str3 {stroke-width:2.74;stroke-miterlimit:22.9256}
+    .str0 {stroke:#2B2A29;stroke-width:100;stroke-miterlimit:22.9256}
+    .str1 {stroke:#2B2A29;stroke-width:20;stroke-miterlimit:22.9256}
+    .str4 {stroke:#2B2A29;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .str2 {stroke:#2B2A29;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil2 {fill:#2B2A29}
+    .fil1 {fill:#2B2A29}
+    .fnt0 {font-weight:normal;font-size:2779.99px;font-family:'Yu Gothic'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2089430963376">
+   <g>
+    <path class="fil0 str0" d="M-46311.84 -22137.28c796.03,0 1441.34,633.29 1441.34,1414.48 0,781.2 -645.31,1414.49 -1441.34,1414.49 -796.02,0 -1441.33,-633.29 -1441.33,-1414.49 0,-549.71 324.53,-1049.63 832.2,-1281.95"/>
+    <line class="fil0 str0" x1="-46311.83" y1="-22137.28" x2="-46311.83" y2= "-20722.8" />
+    <line class="fil0 str0" x1="-46311.83" y1="-20722.8" x2="-45919.05" y2= "-21255.66" />
+   </g>
+   <ellipse class="fil1 str1" cx="-46315.25" cy="-22143.15" rx="36.55" ry="34.89"/>
+   <circle class="fil1 str2" cx="-46309.95" cy="-20729.5" r="48.07"/>
+   <line class="fil0 str0" x1="-43877" y1="-22142.84" x2="-43877" y2= "-19308.31" />
+   <text x="-43122.27" y="-19582.02"  class="fil2 str4 fnt0">TIMEIFY</text>
+  </g>
+ </g>
+</svg>
