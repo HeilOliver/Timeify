@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Timeify.Api.Presenter;
 using Timeify.Api.Shared.Models;
@@ -29,6 +30,7 @@ namespace Timeify.Api.Controllers
         }
 
         [HttpGet("users")]
+        [ProducesResponseType(typeof(List<GetUserResponse>), StatusCodes.Status200OK)]
         public async Task<ActionResult> GetUsers()
         {
             await getAllUser.Handle(new GetAllUserRequest(), allUserPresenter);
