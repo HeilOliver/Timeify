@@ -10,8 +10,12 @@ namespace Timeify.Api.Shared.Models.Response
             RefreshToken = refreshToken;
         }
 
-        public AccessToken AccessToken { get; }
+        public LoginResponse()
+        {
+        }
 
-        public string RefreshToken { get; }
+        public AccessToken AccessToken { get; set; }
+
+        public string RefreshToken { get; set; }
     }
 }

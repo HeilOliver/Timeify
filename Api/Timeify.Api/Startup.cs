@@ -41,6 +41,7 @@ namespace Timeify.Api
                 .AddConfiguration(new AuthConfiguration())
                 .AddConfiguration(new SwaggerConfiguration())
                 .AddConfiguration(new IoCConfiguration())
+                .AddConfiguration(new CorsConfiguration())
                 .SetConfiguration(Configuration)
                 .SetServiceCollection(services)
                 .Apply();
@@ -76,6 +77,7 @@ namespace Timeify.Api
             app.UseSwagger();
 
             app.UseAuthentication();
+            app.UseCors();
             app.UseMvc();
         }
     }

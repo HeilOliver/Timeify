@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Timeify.Api.Presenter;
 using Timeify.Api.Shared.Models.Request;
@@ -21,8 +22,8 @@ namespace Timeify.Api.Controllers
             this.registerUserPresenter = registerUserPresenter;
         }
 
-        // POST api/accounts
-        [HttpPost]
+        // POST api/accounts/create
+        [HttpPost("create")]
         public async Task<ActionResult> Post([FromBody] RegisterUserRequest request)
         {
             if (!ModelState.IsValid)

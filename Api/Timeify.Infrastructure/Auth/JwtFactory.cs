@@ -55,7 +55,7 @@ namespace Timeify.Infrastructure.Auth
             var options = new IdentityOptions();
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, appUser.UserName),
+                //new Claim(JwtRegisteredClaimNames.Sub, appUser.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, await jwtOptions.JtiGenerator()),
                 new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(jwtOptions.IssuedAt).ToString(),
                     ClaimValueTypes.Integer64),

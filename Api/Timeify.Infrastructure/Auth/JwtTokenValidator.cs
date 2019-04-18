@@ -25,7 +25,7 @@ namespace Timeify.Infrastructure.Auth
                 ValidateIssuer = false,
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(signingKey)),
-                ValidateLifetime = false // we check expired tokens here
+                ValidateLifetime = true // we check expired tokens here
             });
         }
     }

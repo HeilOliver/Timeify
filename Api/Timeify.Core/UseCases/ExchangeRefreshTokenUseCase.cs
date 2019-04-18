@@ -37,7 +37,7 @@ namespace Timeify.Core.UseCases
             // invalid token/signing key was passed and we can't extract user claims
             if (cp != null)
             {
-                var id = cp.Claims.First(c => c.Type == "id");
+                var id = cp.Claims.First(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier");
                 var user = await userRepository.GetSingleBySpec(new UserSpecification(id.Value));
 
                 if (user.HasValidRefreshToken(message.RefreshToken))
