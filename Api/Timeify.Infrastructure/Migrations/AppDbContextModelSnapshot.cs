@@ -19,6 +19,69 @@ namespace Timeify.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Timeify.Core.Entities.JobEntity", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy",
+                        SqlServerValueGenerationStrategy.IdentityColumn);
+
+                b.Property<DateTime>("Created");
+
+                b.Property<string>("Description");
+
+                b.Property<DateTime>("Modified");
+
+                b.Property<string>("Name");
+
+                b.Property<string>("OwnerId");
+
+                b.HasKey("Id");
+
+                b.ToTable("Jobs");
+            });
+
+            modelBuilder.Entity("Timeify.Core.Entities.JobTaskEntity", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy",
+                        SqlServerValueGenerationStrategy.IdentityColumn);
+
+                b.Property<DateTime>("Created");
+
+                b.Property<string>("Description");
+
+                b.Property<DateTime>("FinishDate");
+
+                b.Property<bool>("Finished");
+
+                b.Property<int>("JobEntityId");
+
+                b.Property<DateTime>("Modified");
+
+                b.Property<string>("Name");
+
+                b.HasKey("Id");
+
+                b.HasIndex("JobEntityId");
+
+                b.ToTable("JobTasks");
+            });
+
+            modelBuilder.Entity("Timeify.Core.Entities.JobTaskUserEntity", b =>
+            {
+                b.Property<int>("JobTaskId");
+
+                b.Property<string>("UserName");
+
+                b.HasKey("JobTaskId", "UserName");
+
+                b.HasIndex("UserName");
+
+                b.ToTable("JobTaskUserLink");
+            });
+
             modelBuilder.Entity("Timeify.Core.Entities.RefreshTokenEntity", b =>
             {
                 b.Property<int>("Id")
@@ -64,11 +127,34 @@ namespace Timeify.Infrastructure.Migrations
 
                 b.Property<DateTime>("Modified");
 
-                b.Property<string>("UserName");
+                b.Property<string>("UserName")
+                    .IsRequired();
 
                 b.HasKey("Id");
 
                 b.ToTable("Users");
+            });
+
+            modelBuilder.Entity("Timeify.Core.Entities.JobTaskEntity", b =>
+            {
+                b.HasOne("Timeify.Core.Entities.JobEntity")
+                    .WithMany("JobTasks")
+                    .HasForeignKey("JobEntityId")
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity("Timeify.Core.Entities.JobTaskUserEntity", b =>
+            {
+                b.HasOne("Timeify.Core.Entities.JobTaskEntity", "JobTaskEntity")
+                    .WithMany("AssignedUsers")
+                    .HasForeignKey("JobTaskId")
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                b.HasOne("Timeify.Core.Entities.UserEntity", "UserEntity")
+                    .WithMany("AssignedTasks")
+                    .HasForeignKey("UserName")
+                    .HasPrincipalKey("UserName")
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity("Timeify.Core.Entities.RefreshTokenEntity", b =>

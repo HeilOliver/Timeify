@@ -1,12 +1,11 @@
 ﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Timeify.Api.Models.Setting;
 using Timeify.Api.Presenter;
 using Timeify.Api.Shared.Models.Request;
 using Timeify.Common.DI;
-using Timeify.Core.Interfaces.UseCases;
+using Timeify.Core.Interfaces.UseCases.Auth;
 
 namespace Timeify.Api.Controllers
 {
@@ -21,7 +20,8 @@ namespace Timeify.Api.Controllers
         private readonly LoginPresenter loginPresenter;
         private readonly ILoginUseCase loginUseCase;
 
-        public AuthController(ILoginUseCase loginUseCase, LoginPresenter loginPresenter,
+        public AuthController(
+            ILoginUseCase loginUseCase, LoginPresenter loginPresenter,
             IExchangeRefreshTokenUseCase exchangeRefreshTokenUseCase,
             ExchangeRefreshTokenPresenter exchangeRefreshTokenPresenter, IOptions<AuthSettings> authSettings)
         {

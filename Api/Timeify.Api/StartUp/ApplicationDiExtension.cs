@@ -10,7 +10,6 @@ namespace Timeify.Api.StartUp
 {
     public static class ApplicationDiExtension
     {
-
         public static IServiceProvider AddApplicationDi(this IServiceCollection service)
         {
             // Now register our services with Autofac container.
@@ -30,17 +29,6 @@ namespace Timeify.Api.StartUp
 
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(container);
-
-
-            //foreach (var assemblyName in DependencyContext.Default.GetDefaultAssemblyNames())
-            //    AssemblyLoadContext.Default.LoadFromAssemblyName(assemblyName);
-
-            //new InjectableMapper()
-            //    .MapHierarchical((source, to) => service.AddScoped(to, source))
-            //    .MapSingleton((source, to) => service.AddSingleton(to, source))
-            //    .MapTypes();
-
-            //return service;
         }
     }
 }

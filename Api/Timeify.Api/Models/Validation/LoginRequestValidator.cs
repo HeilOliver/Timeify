@@ -7,8 +7,11 @@ namespace Timeify.Api.Models.Validation
     {
         public LoginRequestValidator()
         {
-            RuleFor(x => x.UserName).NotEmpty();
-            RuleFor(x => x.Password).NotEmpty();
+            RuleFor(x => x.UserName)
+                .NotEmpty();
+
+            RuleFor(x => x.Password)
+                .NotEmpty();
         }
     }
 }

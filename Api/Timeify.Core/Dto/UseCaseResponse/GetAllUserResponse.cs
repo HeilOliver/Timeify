@@ -10,6 +10,6 @@ namespace Timeify.Core.Dto.UseCaseResponse
         {
         }
 
-        public List<GetUserResponse> Users { get; set; }
+        public List<SimpleUser> Users { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace Timeify.Core.Entities
 {
     public class UserEntity : BaseEntity
     {
+        private readonly List<JobTaskUserEntity> assignedTasks = new List<JobTaskUserEntity>();
         private readonly List<RefreshTokenEntity> refreshTokens = new List<RefreshTokenEntity>();
 
         internal UserEntity()
@@ -22,13 +23,21 @@ namespace Timeify.Core.Entities
             UserName = userName;
         }
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string IdentityId { get; private set; }
-        public string UserName { get; private set; }
+        public string FirstName { get; }
+
+        public string LastName { get; }
+
+        public string IdentityId { get; }
+
+        public string UserName { get; }
+
         public string Email { get; private set; }
+
         public string PasswordHash { get; private set; }
+
         public IReadOnlyCollection<RefreshTokenEntity> RefreshTokens => refreshTokens.AsReadOnly();
+
+        public IReadOnlyCollection<JobTaskUserEntity> AssignedTasks => assignedTasks.AsReadOnly();
 
         public bool HasValidRefreshToken(string refreshToken)
         {

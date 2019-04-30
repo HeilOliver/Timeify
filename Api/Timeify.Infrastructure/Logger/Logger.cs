@@ -9,8 +9,6 @@ namespace Timeify.Infrastructure.Logger
     {
         private readonly ILog logger;
 
-
-
         public void LogDebug(string message)
         {
             logger?.Debug(message);

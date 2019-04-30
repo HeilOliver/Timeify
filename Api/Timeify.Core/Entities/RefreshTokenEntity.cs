@@ -13,10 +13,10 @@ namespace Timeify.Core.Entities
             RemoteIpAddress = remoteIpAddress;
         }
 
-        public string Token { get; private set; }
-        public DateTime Expires { get; private set; }
-        public int UserId { get; private set; }
+        public string Token { get; }
+        public DateTime Expires { get; }
+        public int UserId { get; }
         public bool Active => DateTime.UtcNow <= Expires;
-        public string RemoteIpAddress { get; private set; }
+        public string RemoteIpAddress { get; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using Timeify.Api.Shared.Auth;
-using Timeify.Core.Dto;
 
 namespace Timeify.Core.Services
 {

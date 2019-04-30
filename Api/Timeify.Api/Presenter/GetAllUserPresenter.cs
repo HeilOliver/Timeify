@@ -1,5 +1,5 @@
 ﻿using System.Net;
-using Newtonsoft.Json;
+using Timeify.Api.Serialization;
 using Timeify.Common.DI;
 using Timeify.Core.Dto.UseCaseResponse;
 using Timeify.Core.Interfaces;
@@ -18,9 +18,10 @@ namespace Timeify.Api.Presenter
 
         public void Handle(GetAllUserResponse response)
         {
-            ContentResult.StatusCode = (int)(response.Success ? HttpStatusCode.OK : HttpStatusCode.InternalServerError);
+            ContentResult.StatusCode =
+                (int) (response.Success ? HttpStatusCode.OK : HttpStatusCode.InternalServerError);
             ContentResult.Content = response.Success
-                ? Serialization.JsonSerializer.SerializeObject(
+                ? JsonSerializer.SerializeObject(
                     response.Users)
                 : string.Empty;
         }

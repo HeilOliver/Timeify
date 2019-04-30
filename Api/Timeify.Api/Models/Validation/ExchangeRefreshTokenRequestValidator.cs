@@ -7,8 +7,11 @@ namespace Timeify.Api.Models.Validation
     {
         public ExchangeRefreshTokenRequestValidator()
         {
-            RuleFor(x => x.AccessToken).NotEmpty();
-            RuleFor(x => x.RefreshToken).NotEmpty();
+            RuleFor(x => x.AccessToken)
+                .NotEmpty();
+
+            RuleFor(x => x.RefreshToken)
+                .NotEmpty();
         }
     }
 }

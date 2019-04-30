@@ -21,7 +21,8 @@ namespace Timeify.Api.Presenter
             ContentResult.StatusCode = (int) (response.Success ? HttpStatusCode.OK : HttpStatusCode.BadRequest);
             ContentResult.Content = response.Success
                 ? JsonSerializer.SerializeObject(
-                    new Shared.Models.Response.ExchangeRefreshTokenResponse(response.AccessToken, response.RefreshToken))
+                    new Shared.Models.Response.ExchangeRefreshTokenResponse(response.AccessToken,
+                        response.RefreshToken))
                 : JsonSerializer.SerializeObject(response.Message);
         }
     }
