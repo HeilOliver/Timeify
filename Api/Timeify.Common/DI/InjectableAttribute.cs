@@ -15,10 +15,12 @@ namespace Timeify.Common.DI
         {
         }
 
-        public InjectableAttribute(LifeTimeType lifetimeManager)
+        public InjectableAttribute(LifeTimeType lifetimeManager) : this(null, lifetimeManager)
         {
-            TargetType = null;
-            LifetimeManager = lifetimeManager;
+        }
+
+        public InjectableAttribute(Type targetType) : this(targetType, LifeTimeType.Container)
+        {
         }
 
         public InjectableAttribute(Type targetType, LifeTimeType lifetimeManager)

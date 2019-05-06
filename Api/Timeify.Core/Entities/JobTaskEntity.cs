@@ -30,7 +30,7 @@ namespace Timeify.Core.Entities
 
         public bool Finished { get; set; }
 
-        public int JobEntityId { get; }
+        public int JobEntityId { get; private set; }
 
         public IReadOnlyCollection<JobTaskUserEntity> AssignedUsers => assignedUsers.AsReadOnly();
 

@@ -23,13 +23,13 @@ namespace Timeify.Core.Entities
             UserName = userName;
         }
 
-        public string FirstName { get; }
+        public string FirstName { get; private set; }
 
-        public string LastName { get; }
+        public string LastName { get; private set; }
 
-        public string IdentityId { get; }
+        public string IdentityId { get; private set; }
 
-        public string UserName { get; }
+        public string UserName { get; private set; }
 
         public string Email { get; private set; }
 

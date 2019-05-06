@@ -13,11 +13,11 @@
             UserName = userName;
         }
 
-        public int JobTaskId { get; }
+        public int JobTaskId { get; private set; }
 
         public JobTaskEntity JobTaskEntity { get; private set; }
 
-        public string UserName { get; }
+        public string UserName { get; private set; }
 
         public UserEntity UserEntity { get; private set; }
     }

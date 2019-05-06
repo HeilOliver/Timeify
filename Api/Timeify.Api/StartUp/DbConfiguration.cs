@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Timeify.Infrastructure.Context.App;
@@ -10,16 +11,33 @@ namespace Timeify.Api.StartUp
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddDbContext<AppIdentityDbContext>(
-                options => options
-                    .UseSqlServer(Configuration.GetConnectionString("Default"),
-                        b => b.MigrationsAssembly("Timeify.Infrastructure")));
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            {
+                services.AddDbContext<AppIdentityDbContext>(
+                    options => options
+                        .UseSqlServer(Configuration.GetConnectionString("AzureDbConnection"),
+                            b => b.MigrationsAssembly("Timeify.Infrastructure")));
 
-            services.AddDbContext<AppDbContext>(
-                options => options
-                    .UseSqlServer(Configuration.GetConnectionString("Default"),
-                        b => b.MigrationsAssembly("Timeify.Infrastructure")));
+                services.AddDbContext<AppDbContext>(
+                    options => options
+                        .UseSqlServer(Configuration.GetConnectionString("AzureDbConnection"),
+                            b => b.MigrationsAssembly("Timeify.Infrastructure")));
+            }
+            else
+            {
+                services.AddDbContext<AppIdentityDbContext>(
+                    options => options
+                        .UseSqlServer(Configuration.GetConnectionString("Default"),
+                            b => b.MigrationsAssembly("Timeify.Infrastructure")));
+
+                services.AddDbContext<AppDbContext>(
+                    options => options
+                        .UseSqlServer(Configuration.GetConnectionString("Default"),
+                            b => b.MigrationsAssembly("Timeify.Infrastructure")));
+            }
+
+            services.BuildServiceProvider().GetService<AppIdentityDbContext>().Database.Migrate();
+            services.BuildServiceProvider().GetService<AppDbContext>().Database.Migrate();
         }
     }
 }
