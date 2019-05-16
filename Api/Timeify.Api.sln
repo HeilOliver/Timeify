@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timeify.Core", "Timeify.Cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timeify.Infrastructure", "Timeify.Infrastructure\Timeify.Infrastructure.csproj", "{A054FB78-2B18-4727-AAB0-3F82E94887E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timeify.Core.Test", "Timeify.Core.Test\Timeify.Core.Test.csproj", "{FF5CF4A6-FEB0-4AB3-84F4-5FB0E568EF29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A054FB78-2B18-4727-AAB0-3F82E94887E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A054FB78-2B18-4727-AAB0-3F82E94887E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A054FB78-2B18-4727-AAB0-3F82E94887E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5CF4A6-FEB0-4AB3-84F4-5FB0E568EF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5CF4A6-FEB0-4AB3-84F4-5FB0E568EF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5CF4A6-FEB0-4AB3-84F4-5FB0E568EF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5CF4A6-FEB0-4AB3-84F4-5FB0E568EF29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
